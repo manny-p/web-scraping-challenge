@@ -30,7 +30,6 @@ def scrape():
 
     # Retrieve latest news paragraph
     news_p = soup.find_all('div', class_='article_teaser_body')[0].text
-    news_p
 
     # JPL Mars Space Image
     jpl_url = 'https://spaceimages-mars.com/'
@@ -93,7 +92,8 @@ def scrape():
         "news_p": news_p,
         "featured_image_url": img_path,
         "fact_table": table,
-        "hemisphere_images": hemisphere_img_urls
+        "hemisphere_images": hemisphere_img_urls,
+        "hemisphere_title": title,
     }
 
     browser.quit()
